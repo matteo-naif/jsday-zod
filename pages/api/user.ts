@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { UserModel } from '../../models/index.model';
+import { UserModel } from '../../models';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	const user: UserModel = {

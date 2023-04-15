@@ -1,4 +1,4 @@
-import { UserSchema } from '../models/index.model';
+import { UserSchema } from '../models';
 
 /**
  * The return type is infered

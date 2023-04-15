@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
-import { getUserData } from '../api/user.api';
-import { UserModel, UserSchema } from '../models/index.model';
+import { getUserData } from '../api';
+import { UserModel, UserSchema } from '../models';
 import { ZodError } from 'zod';
 
 /**
@@ -36,6 +36,7 @@ function Homepage(params: any) {
 			<div className="container">
 				{fields.map((field, i) => (
 					<button
+						key={`toggle-${i}`}
 						onClick={() => setSection(field)}
 						className={'toggle ' + (section === field ? 'is-active' : '')}
 					>
